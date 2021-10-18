@@ -1,0 +1,8 @@
+name: ExamplePlugin
+version: '${project.version}'
+main: club.deltapvp.exampleplugin.ExamplePlugin
+api-version: 1.17
+depend: [ DeltaCore ]
+authors: [ hypews ]
+description: An example plugin for the wiki
+website: https://wiki.deltapvp.club
