@@ -1,6 +1,9 @@
 package club.deltapvp.exampleplugin;
 
 import club.deltapvp.deltacore.api.DeltaPlugin;
+import club.deltapvp.exampleplugin.messages.FileLocale;
+import lombok.Getter;
+import lombok.Setter;
 
 public final class ExamplePlugin extends DeltaPlugin {
 
@@ -13,9 +16,21 @@ public final class ExamplePlugin extends DeltaPlugin {
     In this example, all aspects of the DeltaAPI will be covered for reference and documentation.
      */
 
+    @Getter
+    @Setter
+    private static ExamplePlugin instance;
+
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        setInstance(this);
+
+        /*
+        Messages
+         */
+
+        // File
+        FileLocale.init(); // This is required to load the messages into their files
+
 
     }
 
