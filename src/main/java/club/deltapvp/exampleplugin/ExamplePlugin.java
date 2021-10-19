@@ -1,6 +1,7 @@
 package club.deltapvp.exampleplugin;
 
 import club.deltapvp.deltacore.api.DeltaPlugin;
+import club.deltapvp.exampleplugin.commands.CommandHelp;
 import club.deltapvp.exampleplugin.messages.FileLocale;
 import lombok.Getter;
 import lombok.Setter;
@@ -31,6 +32,12 @@ public final class ExamplePlugin extends DeltaPlugin {
         // File
         FileLocale.init(); // This is required to load the messages into their files
 
+        /**
+         * @registerCommands - This registers the command throughout the server. You also DO NOT need to register it in plugin.yml
+         */
+        registerCommands(
+                new CommandHelp()
+        );
 
     }
 

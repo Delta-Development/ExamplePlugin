@@ -5,12 +5,15 @@ import club.deltapvp.exampleplugin.ExamplePlugin;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.command.CommandSender;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 @RequiredArgsConstructor
 public enum FileLocale {
+
     // Other
+    HELP("help", Arrays.asList("&cHelp:" + "&7/example - &e Sends an example message")),
     NO_PERMS("no-perms", Collections.singletonList("&cNo perms!"));
 
     private final String id;
